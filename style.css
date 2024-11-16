@@ -41,28 +41,33 @@ a {
     align-items: center;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #333; /* Dark background color */
-    padding: 10px 0;
+    padding: 10px 20px; /* Adjust padding if necessary */
+    height: 50px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0;
 }
 
 .footer-btn {
-    background-color: gray; /* Green color */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    flex-grow: 1;
-    margin: 0 5px;
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    padding: 0; /* Remove default padding */
+    cursor: pointer; /* Show pointer cursor on hover */
 }
 
-.footer-btn:hover {
-    background-color: darkgray; /* Darker green on hover */
+.footer-btn-img {
+    width: 25px; /* Adjust size of your button image */
+    height: 25px; /* Maintain square aspect ratio if the images are square */
+    object-fit: contain; /* Make sure the image is contained within the button */
 }
+
+/* Optional: Adjust hover effect if you want */
+.footer-btn:hover .footer-btn-img {
+    opacity: 0.8; /* Make the button slightly transparent on hover */
+}
+
 
   
 #viewport {
