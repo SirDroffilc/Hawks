@@ -20,9 +20,6 @@
                 buttonRootId: 'ton-connect'
             });
 
-            const disconnectButton = document.getElementById('disconnectButton');
-            disconnectButton.style.display = 'none';
-
         </script>
     
         <script>
@@ -57,6 +54,8 @@
                     console.error("Error disconnecting from wallet:", error);
                 }
             }
+            const disconnectButton = document.getElementById('disconnectButton');
+            disconnectButton.style.display = 'none';
         </script>
         
     <!------------------------------------------------------------------------------------------------------>
