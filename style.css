@@ -180,6 +180,112 @@ a {
     color: #3afd8f;
 }
 
+.quest-section {
+    background: linear-gradient(135deg, #a071ea, #4a2dfd, #6e75de);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+}
+.daily-check-text {
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    display: flex;
+}
+
+.earn-text {
+    text-align: center; 
+    margin: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.quests-list-section {
+    background: #252326;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+}
+.quests-list-section p {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.btn-quest {
+    background: linear-gradient(135deg, #6775d5, #2d3045, #4e88de);
+    color: white;
+    width: 100%;
+}
+
+.image-details-section {
+    background: linear-gradient(135deg, #2d3045, #2d3045, #2d3045);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+}
+
+.image-details-section img {
+    width: auto; /* Adjust to desired size */
+    height: 110px;
+    margin-right: 20px; /* Space between image and details */
+}
+
+.details {
+    /* Styling for the text details, you can add more styles here */
+    text-align: left;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers the content horizontally */
+    justify-content: center;  /* Centers the content vertically */
+    margin-top: 40px;  /* Adds space between header and profile */
+}
+
+.profile-icon {
+    width: 100px;  /* Makes the profile icon large */
+    height: 100px;  /* Adjust height to maintain aspect ratio */
+    border-radius: 50%;  /* Makes the profile icon circular */
+    object-fit: cover;  /* Ensures the image scales properly */
+}
+
+.username {
+    margin-top: 20px;  /* Adds space between the icon and username */
+    font-size: 24px;   /* Adjust the font size for the username */
+    font-weight: bold; /* Make the username bold */
+}
+
+/* Personal details styling */
+.personal-details {
+    margin-top: 40px;
+    width: 80%;  /* Optional: You can adjust the width of the section */
+    max-width: 600px;  /* Optional: Limits the maximum width */
+    padding: 20px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;  /* Aligns items on the same line */
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    text-align: right;
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -213,8 +319,31 @@ a {
     opacity: 0.8; /* Make the button slightly transparent on hover */
 }
 
+.floating-icon {
+    position: fixed;  /* Keeps the icon fixed in place */
+    bottom: 80px;     /* Adjust to position the icon 20px from the bottom */
+    right: 20px;      /* Adjust to position the icon 20px from the right */
+    width: 50px;      /* Icon size (adjust as needed) */
+    height: 50px;     /* Icon size (adjust as needed) */
+    border-radius: 50%; /* Makes the icon round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow effect */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    text-decoration: none; /* Removes the underline from the link */
+}
 
-  
+.floating-icon img {
+    width: 100%;  /* Ensures the image fills the container */
+    height: 100%;
+}
+
+.floating-icon:hover {
+    background-color: #0056b3;  /* Changes color when hovering */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
 #viewport {
     position: fixed;
     left: 0;

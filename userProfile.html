@@ -10,6 +10,49 @@
 </head>
 
 <body>
+        <!-------------------------------Connect-------------------------------------------------------->
+        <div id="ton-connect"></div>
+        <script>
+            const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+                manifestUrl: 'https://trydeploy.vercel.app/tonconnect-manifest.json',
+                buttonRootId: 'ton-connect'
+            });
+    
+        </script>
+    
+        <script>
+            async function connectToWallet() {
+                const connectedWallet = await tonConnectUI.connectWallet();
+                // Do something with connectedWallet if needed
+                console.log(connectedWallet);
+            }
+        
+            // Call the function
+            connectToWallet().catch(error => {
+                console.error("Error connecting to wallet:", error);
+                tonConnectUI.uiOptions = {
+                twaReturnUrl: 'https://t.me/Realtontry_bot'
+      };
+            });
+        </script>
+    <!-------------------------------Disconnect-------------------------------------------------------->
+        <button onclick = "disconnectFromWallet()" >DISCONNECT ACCOUNT</button>
+        <script>
+             async function disconnectFromWallet() {
+                try {
+                    await tonConnectUI.disconnect();
+                    console.log("Disconnected from wallet.");
+                    // Show the connect button again after disconnecting
+                    connectButton.style.display = 'inline-block';
+                    disconnectButton.style.display = 'none';
+                } catch (error) {
+                    console.error("Error disconnecting from wallet:", error);
+                }
+            }
+        </script>
+        
+    <!------------------------------------------------------------------------------------------------------>
+    
     <header class="header">
         <div id="back-button-icon">
             <a href="dashboard.html">
@@ -17,8 +60,22 @@
             </a>
         </div>
     </header>
-    <div>
-        <h1> THIS IS THE USER PROFILE </h1>
+
+    <div class="profile-container">
+        <img src="assets/profile-icon.png" alt="Profile Icon" class="profile-icon">
+        <div class="username">LEONY</div>
+
+    </div>
+
+    <div class="personal-details">
+        <div class="detail">
+            <span class="label">Username:</span>
+            <span class="value">JohnDoe123</span>
+        </div>
+        <div class="detail">
+            <span class="label">Wallet Address:</span>
+            <span class="value">0xABC1234def567ghijk890lmn</span>
+        </div>
     </div>
 
     <div id="footer-container"></div>
@@ -26,7 +83,6 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
     <script src="loadFooter.js"></script>
-    <script src="loadHeader.js"></script>
 
 
     <!-- Eruda is console for mobile browsers -->
