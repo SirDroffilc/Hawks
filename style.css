@@ -34,6 +34,36 @@ a {
         max-width: 100%; /* Adjusts image to full width on very small devices */
     }
   }
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Dark background color */
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-btn {
+    background-color: gray; /* Green color */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.footer-btn:hover {
+    background-color: darkgray; /* Darker green on hover */
+}
+
   
 #viewport {
     position: fixed;
