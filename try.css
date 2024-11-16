@@ -1,15 +1,29 @@
-.container--0- {
-    position: absolute;
-    left: -209px;
-    top: -451px;
-    width: 393px;
-    height: 852px;
-    background-color: #151418;
-    justify-content: start;
-    align-items: start;
-    border-radius: 25px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Ensures images are stacked vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adds space between the images */
+  height: 100vh;
+}
+
+.responsive-img {
+  max-width: 90%; /* Ensures the image does not take up more than 90% of the screen width */
+  height: auto;
+  border-radius: 10px; /* Gives the image rounded corners for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional media query for smaller screens */
+@media (max-width: 480px) {
+  .responsive-img {
+      max-width: 100%; /* Adjusts image to full width on very small devices */
   }
+}

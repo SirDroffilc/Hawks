@@ -1,7 +1,7 @@
 body {
     --bg-color: black;
     font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
-    background-color: var(--bg-color);
+    background-color: black;
     color: white;
     margin: 48px 24px;
     padding: 0;
@@ -11,6 +11,30 @@ body {
 a {
     color: var(--tg-theme-link-color);
 }
+
+.container {
+    display: flex;
+    flex-direction: column; /* Ensures images are stacked vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds space between the images */
+    height: 100vh;
+  }
+  
+  .responsive-img {
+    max-width: 90%; /* Ensures the image does not take up more than 90% of the screen width */
+    height: auto;
+    border-radius: 10px; /* Gives the image rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Additional media query for smaller screens */
+  @media (max-width: 480px) {
+    .responsive-img {
+        max-width: 100%; /* Adjusts image to full width on very small devices */
+    }
+  }
+  
 #viewport {
     position: fixed;
     left: 0;
