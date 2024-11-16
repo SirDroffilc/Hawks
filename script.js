@@ -51,14 +51,14 @@ function setViewportData() {
 
 function navigateToPage(page) { 
     if (page === 'quest') {
-        Telegram.WebApp.openLink('quest.html'); // Adjust URL as needed
+        window.location.href = 'quest.html'; // Adjust URL as needed
     } else if (page === 'dashboard') {
-        Telegram.WebApp.openLink('dashboard.html'); // Adjust URL as needed
+        window.location.href = 'dashboard.html'; // Adjust URL as needed
     } else if (page === 'wallet') {
-        Telegram.WebApp.openLink('wallet.html'); // Adjust URL as needed
+        window.location.href = 'wallet.html'; // Adjust URL as needed
     }
     else {
-        Telegram.WebApp.href = 'dashboard.html'
+        window.location.href = 'dashboard.html'
     }
 }
 
