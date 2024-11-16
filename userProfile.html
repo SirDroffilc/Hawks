@@ -14,7 +14,7 @@
         <div id="ton-connect"></div>
         <script>
             const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-                manifestUrl: 'https://trydeploy.vercel.app/tonconnect-manifest.json',
+                manifestUrl: 'https://hackconnect-iota.vercel.app/tonconnect-manifest.json',
                 buttonRootId: 'ton-connect'
             });
     
@@ -31,7 +31,7 @@
             connectToWallet().catch(error => {
                 console.error("Error connecting to wallet:", error);
                 tonConnectUI.uiOptions = {
-                twaReturnUrl: 'https://t.me/Realtontry_bot'
+                twaReturnUrl: 'https://t.me/HawkConnectBot'
       };
             });
         </script>
