@@ -1,10 +1,11 @@
 window.onload = function() {
     // Load footer dynamically
+
+    // Fetch and populate the footer
     fetch('footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
-            setActiveButton();
         })
         .catch(error => console.error('Error loading footer:', error));
 

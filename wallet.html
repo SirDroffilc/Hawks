@@ -10,8 +10,50 @@
 </head>
 
 <body>
-    <div>
-        <h1> THIS IS THE WALLET PAGE</h1>
+    <header class="header">
+        <div id="logo-icon">
+            <img src="assets/logo-purple.png" alt="logo-purple">
+        </div>
+        <div id="user-profile-icon">
+            <a href="userProfile.html">
+                <img src="assets/profile-icon.png" alt="profile-icon">
+            </a>
+        </div>
+        <!-- <div id="back-button-icon">
+            <img src="assets/back-button.png" alt="back-button">
+        </div> -->
+    </header>
+    
+
+    <div class="wallet-app">
+        <main>
+            <section class="balance-card">
+                <p class="my-balance">My Balance</p>
+                <p class="balance-amount">697 HACKCOINS</p>
+                <div class="action-buttons">
+                    <button class="btn receive-btn">Receive</button>
+                    <button class="btn send-btn">Send</button>
+                </div>
+            </section>
+            <section class="invite-section">
+                <p class="invite-text">Invite Friend and Earn</p>
+                <p class="invite-rewards">Get <strong>10%</strong> of the rewards</p>
+                <button class="btn invite-btn">Invite</button>
+            </section>
+            <section class="transactions-section">
+                <h3>Transactions</h3>
+                <ul class="transactions-list">
+                    <li>Daily Check In <span class="reward">+3 🪙</span></li>
+                    <li>Daily Check In <span class="reward">+3 🪙</span></li>
+                    <li>Daily Check In <span class="reward">+3 🪙</span></li>
+                    <li>Participation Rewards <span class="reward">+50 🪙</span></li>
+                    <li>Participation Rewards <span class="reward">+50 🪙</span></li>
+                    <li>Participation Rewards <span class="reward">+50 🪙</span></li>
+                    <li>Participation Rewards <span class="reward">+50 🪙</span></li>
+                    <li>Participation Rewards <span class="reward">+50 🪙</span></li>
+                </ul>
+            </section>
+        </main>
     </div>
 
     <div id="footer-container"></div>
@@ -19,6 +61,7 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
     <script src="loadFooter.js"></script>
+    <script src="loadHeader.js"></script>
 
 
     <!-- Eruda is console for mobile browsers -->
