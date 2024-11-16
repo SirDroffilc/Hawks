@@ -49,13 +49,13 @@ function setViewportData() {
     expandEl.innerText = 'Is Expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false');
 }
 
-function navigateToPage(page) {
+function navigateToPage(page) { 
     if (page === 'quest') {
-        Telegram.WebApp.href = 'quest.html'; // Adjust URL as needed
+        Telegram.WebApp.openLink('quest.html'); // Adjust URL as needed
     } else if (page === 'dashboard') {
-        Telegram.WebApp.href = 'dashboard.html'; // Adjust URL as needed
+        Telegram.WebApp.openLink('dashboard.html'); // Adjust URL as needed
     } else if (page === 'wallet') {
-        Telegram.WebApp.href = 'wallet.html'; // Adjust URL as needed
+        Telegram.WebApp.openLink('wallet.html'); // Adjust URL as needed
     }
     else {
         Telegram.WebApp.href = 'dashboard.html'
