@@ -1,0 +1,15 @@
+.container--0- {
+    position: absolute;
+    left: -209px;
+    top: -451px;
+    width: 393px;
+    height: 852px;
+    background-color: #151418;
+    justify-content: start;
+    align-items: start;
+    border-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
