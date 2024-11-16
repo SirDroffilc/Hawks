@@ -10,7 +10,9 @@
 </head>
 
 <body>
+    
         <!-------------------------------Connect-------------------------------------------------------->
+        <button id='disconnectButton' onclick = "disconnectFromWallet()" style="display: none;">DISCONNECT ACCOUNT</button>
         <div id="ton-connect"></div>
         <script>
             const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
@@ -23,6 +25,8 @@
         <script>
             async function connectToWallet() {
                 const connectedWallet = await tonConnectUI.connectWallet();
+                const disconnectButton = document.getElementById('disconnectButton');
+                disconnectButton.display = 'block';
                 // Do something with connectedWallet if needed
                 console.log(connectedWallet);
             }
@@ -36,7 +40,6 @@
             });
         </script>
     <!-------------------------------Disconnect-------------------------------------------------------->
-        <button onclick = "disconnectFromWallet()" >DISCONNECT ACCOUNT</button>
         <script>
              async function disconnectFromWallet() {
                 try {
