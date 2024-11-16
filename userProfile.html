@@ -25,8 +25,10 @@
         <script>
             async function connectToWallet() {
                 const connectedWallet = await tonConnectUI.connectWallet();
-                const disconnectButton = document.getElementById('disconnectButton');
-                disconnectButton.display = 'block';
+                if (connectedWallet) {
+                    const disconnectButton = document.getElementById('disconnectButton');
+                    disconnectButton.style.display = 'block';
+                }
                 // Do something with connectedWallet if needed
                 console.log(connectedWallet);
             }
