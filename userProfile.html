@@ -12,51 +12,53 @@
 <body>
     
         <!-------------------------------Connect-------------------------------------------------------->
-        <button id='disconnectButton' onclick = "disconnectFromWallet()" style="display: none;">DISCONNECT ACCOUNT</button>
-        <div id="ton-connect"></div>
-        <script>
-            const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-                manifestUrl: 'https://hackconnect-iota.vercel.app/tonconnect-manifest.json',
-                buttonRootId: 'ton-connect'
-            });
+    <button id="connectButton" onclick="connectToWallet()">CONNECT ACCOUNT</button>
+    <button id="disconnectButton" onclick="disconnectFromWallet()" style="display: none;">DISCONNECT ACCOUNT</button>
+    <div id="ton-connect"></div>
 
-        </script>
-    
-        <script>
-            async function connectToWallet() {
+    <script>
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://hackconnect-iota.vercel.app/tonconnect-manifest.json',
+            buttonRootId: 'ton-connect'
+        });
+
+        // Function to connect the wallet
+        async function connectToWallet() {
+            try {
                 const connectedWallet = await tonConnectUI.connectWallet();
                 if (connectedWallet) {
+                    // Hide the connect button and show the disconnect button
+                    const connectButton = document.getElementById('connectButton');
                     const disconnectButton = document.getElementById('disconnectButton');
-                    disconnectButton.style.display = 'block';
+                    connectButton.style.display = 'none';  // Hide connect button
+                    disconnectButton.style.display = 'inline-block';  // Show disconnect button
+
+                    console.log('Connected to wallet:', connectedWallet);
                 }
-                // Do something with connectedWallet if needed
-                console.log(connectedWallet);
-            }
-        
-            // Call the function
-            connectToWallet().catch(error => {
+            } catch (error) {
                 console.error("Error connecting to wallet:", error);
                 tonConnectUI.uiOptions = {
-                twaReturnUrl: 'https://t.me/HawkConnectBot'
-      };
-            });
-        </script>
-    <!-------------------------------Disconnect-------------------------------------------------------->
-        <script>
-             async function disconnectFromWallet() {
-                try {
-                    await tonConnectUI.disconnect();
-                    console.log("Disconnected from wallet.");
-                    // Show the connect button again after disconnecting
-                    connectButton.style.display = 'inline-block';
-                    disconnectButton.style.display = 'none';
-                } catch (error) {
-                    console.error("Error disconnecting from wallet:", error);
-                }
+                    twaReturnUrl: 'https://t.me/HawkConnectBot'
+                };
             }
-            const disconnectButton = document.getElementById('disconnectButton');
-            disconnectButton.style.display = 'none';
-        </script>
+        }
+
+        // Function to disconnect the wallet
+        async function disconnectFromWallet() {
+            try {
+                await tonConnectUI.disconnect();
+                console.log("Disconnected from wallet.");
+
+                // Hide the disconnect button and show the connect button again
+                const connectButton = document.getElementById('connectButton');
+                const disconnectButton = document.getElementById('disconnectButton');
+                connectButton.style.display = 'inline-block';  // Show connect button
+                disconnectButton.style.display = 'none';  // Hide disconnect button
+            } catch (error) {
+                console.error("Error disconnecting from wallet:", error);
+            }
+        }
+    </script>
         
     <!------------------------------------------------------------------------------------------------------>
     
