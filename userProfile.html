@@ -29,7 +29,7 @@
     <div class="personal-details">
         <div class="detail">
             <span class="label">Username:</span>
-            <span class="value">JohnDoe123</span>
+            <span class="value" id="display-username"></span>
         </div>
         <div class="detail">
             <span class="label">Wallet Address:</span>
@@ -95,12 +95,10 @@
     <script src="script.js"></script>
     <script src="loadFooter.js"></script>
 
-
     <!-- Eruda is console for mobile browsers -->
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
     <button onclick ="displayteleuser()">DEBUG BUTTON</button>
-    <div id = display-username></div>
     <script>
         function displayteleuser(){
             // Correcting the typo from Webpp to WebApp
@@ -108,7 +106,7 @@
             
             if (username) {
                 // Use backticks for string interpolation
-                document.getElementById('display-username').textContent = `Telegram Username: @${username}`;
+                document.getElementById('display-username').textContent = `@${username}`;
                 console.log(username);  // Logging the username to the console
             } else {
                 console.log("Username not available");
