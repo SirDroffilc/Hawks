@@ -98,8 +98,11 @@
     <!-- Eruda is console for mobile browsers -->
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
-    <button onclick ="displayteleuser()">DEBUG BUTTON</button>
+    <!-- <button onclick ="displayteleuser()">DEBUG BUTTON</button> -->
     <script>
+        window.onload = function() {
+            displayteleuser();
+        };
         function displayteleuser(){
             // Correcting the typo from Webpp to WebApp
             const username = Telegram.WebApp.initDataUnsafe.user?.username;
