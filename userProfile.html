@@ -105,7 +105,7 @@
     <div id = display-username></div>
     <script>
         function displayteleuser(){
-            const username = Telegram.Webpp.initDataUnsafe.user?.username;
+            const username = Telegram.Webapp.initDataUnsafe.user?.username;
             if(username){
                 document.getElementById('display-username').textContent='Telegram Username: @${userName}';
                 console.log(username);
