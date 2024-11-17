@@ -105,13 +105,19 @@
     <div id = display-username></div>
     <script>
         function displayteleuser(){
-            const username = Telegram.Webapp.initDataUnsafe.user?.username;
-            if(username){
-                document.getElementById('display-username').textContent='Telegram Username: @${userName}';
-                console.log(username);
+            // Correcting the typo from Webpp to WebApp
+            const username = Telegram.WebApp.initDataUnsafe.user?.username;
+            
+            if (username) {
+                // Use backticks for string interpolation
+                document.getElementById('display-username').textContent = `Telegram Username: @${username}`;
+                console.log(username);  // Logging the username to the console
+            } else {
+                console.log("Username not available");
             }
         }
     </script>
+    
     
 </body>
 
