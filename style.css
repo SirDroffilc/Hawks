@@ -271,6 +271,18 @@ a {
     padding: 20px;
 }
 
+.styled-button {
+    background-color: white; /* Green background */
+    color: black;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto Thin';
+}
 .detail {
     display: flex;
     justify-content: space-between;  /* Aligns items on the same line */
@@ -284,6 +296,12 @@ a {
 
 .value {
     text-align: right;
+}
+
+#ton-connect {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .footer {

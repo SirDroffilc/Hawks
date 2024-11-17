@@ -12,11 +12,39 @@
 
 <body>
     
-        <!-------------------------------Connect-------------------------------------------------------->
-    <button id="connectButton" onclick="connectToWallet()">CONNECT ACCOUNT</button>
-    <button id="disconnectButton" onclick="disconnectFromWallet()" style="display: none;">DISCONNECT ACCOUNT</button>
-    <div id="ton-connect"></div>
+        
+    
+    <header class="header">
+        <div id="back-button-icon">
+            <a href="dashboard.html">
+                <img src="assets/back-button.png" alt="back-button">
+            </a>
+        </div>
+    </header>
 
+    <div class="profile-container">
+        <img src="assets/profile-icon.png" alt="Profile Icon" class="profile-icon">
+        <div class="username">LEONY</div>
+
+    </div>
+
+    <div class="personal-details">
+        <div class="detail">
+            <span class="label">Username:</span>
+            <span class="value">JohnDoe123</span>
+        </div>
+        <div class="detail">
+            <span class="label">Wallet Address:</span>
+            <span class="value">0xABC1234def567ghijk890lmn</span>
+        </div>
+    </div>
+
+    <!-------------------------------Connect-------------------------------------------------------->
+    <div class="button-container">
+        <button id="disconnectButton" onclick="disconnectFromWallet()" style="display: none;">DISCONNECT ACCOUNT</button>
+        <div id="ton-connect"></div>
+    </div>
+    
     <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
             manifestUrl: 'https://hackconnect-iota.vercel.app/tonconnect-manifest.json',
@@ -62,31 +90,6 @@
     </script>
         
     <!------------------------------------------------------------------------------------------------------>
-    
-    <header class="header">
-        <div id="back-button-icon">
-            <a href="dashboard.html">
-                <img src="assets/back-button.png" alt="back-button">
-            </a>
-        </div>
-    </header>
-
-    <div class="profile-container">
-        <img src="assets/profile-icon.png" alt="Profile Icon" class="profile-icon">
-        <div class="username">LEONY</div>
-
-    </div>
-
-    <div class="personal-details">
-        <div class="detail">
-            <span class="label">Username:</span>
-            <span class="value">JohnDoe123</span>
-        </div>
-        <div class="detail">
-            <span class="label">Wallet Address:</span>
-            <span class="value">0xABC1234def567ghijk890lmn</span>
-        </div>
-    </div>
 
     <div id="footer-container"></div>
 
