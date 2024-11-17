@@ -99,16 +99,23 @@
     <!-- Eruda is console for mobile browsers -->
     <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
-    
+    <button onclick ="displayteleuser()">DEBUG BUTTON</button>
     <div id = display-username></div>
     <script>
         function displayteleuser(){
-            const username = Telegram.Webpp.initDataUnsafe.user?.username;
-            if(username){
-                document.getElementById('display-username').textContent='Telegram Username: @${userName}';
+            // Correcting the typo from Webpp to WebApp
+            const username = Telegram.WebApp.initDataUnsafe.user?.username;
+            
+            if (username) {
+                // Use backticks for string interpolation
+                document.getElementById('display-username').textContent = `Telegram Username: @${username}`;
+                console.log(username);  // Logging the username to the console
+            } else {
+                console.log("Username not available");
             }
         }
     </script>
+    
     
 </body>
 
