@@ -22,7 +22,7 @@
 
     <div class="profile-container">
         <img src="assets/profile-icon.png" alt="Profile Icon" class="profile-icon">
-        <div class="username">LEONY</div>
+        <div class="username" id="firstName"></div>
 
     </div>
 
@@ -30,10 +30,6 @@
         <div class="detail">
             <span class="label">Username:</span>
             <span class="value" id="display-username"></span>
-        </div>
-        <div class="detail">
-            <span class="label">Wallet Address:</span>
-            <span class="value">0xABC1234def567ghijk890lmn</span>
         </div>
     </div>
 
@@ -106,6 +102,7 @@
         function displayteleuser(){
             // Correcting the typo from Webpp to WebApp
             const username = Telegram.WebApp.initDataUnsafe.user?.username;
+            const firstName = Telegram.WebApp.initDataUnsafe.user?.firstName;
             
             if (username) {
                 // Use backticks for string interpolation
@@ -113,6 +110,12 @@
                 console.log(username);  // Logging the username to the console
             } else {
                 console.log("Username not available");
+            }
+
+            if (firstName) {
+                document.getElementById('firstName').textContent = `${firstName}`;
+            } else {
+                console.log("First name not available");
             }
         }
     </script>
