@@ -299,10 +299,10 @@ a {
 }
 
 #ton-connect {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+    position: relative;
+    left: 28vw;
 }
+
 
 .footer {
     display: flex;
