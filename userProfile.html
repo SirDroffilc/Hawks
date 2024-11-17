@@ -102,7 +102,7 @@
         function displayteleuser(){
             // Correcting the typo from Webpp to WebApp
             const username = Telegram.WebApp.initDataUnsafe.user?.username;
-            const firstName = Telegram.WebApp.initDataUnsafe.user?.firstName;
+            const firstName = Telegram.WebApp.initDataUnsafe.user?.first_name;
             
             if (username) {
                 // Use backticks for string interpolation
